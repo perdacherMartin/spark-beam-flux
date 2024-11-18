@@ -1,0 +1,17 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: legalrag
+resources:
+   - namespace.yaml
+helmCharts:
+- name: spark
+  repo: oci://registry-1.docker.io/bitnamicharts/spark
+  version: v1.2.0
+  releaseName: dev-spark
+  namespace: legalrag
+#  valuesFile: values.yaml
+#  additionalValuesFiles:
+#  - values-file-1.yml
+#  - values-file-2.yml
+#   - repository.yaml
+#   - release.yaml
