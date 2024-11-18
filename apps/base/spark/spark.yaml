@@ -7,17 +7,3 @@ spec:
   url: oci://registry-1.docker.io/bitnamicharts/spark
   ref:
     tag: 9.2.14
----
-apiVersion: source.toolkit.fluxcd.io/v1
-kind: HelmChart
-metadata:
-  name: spark
-  namespace: default
-spec:
-  interval: 5m0s
-  chart: spark
-  reconcileStrategy: ChartVersion
-  sourceRef:
-    kind: OCIRepository
-    name: spark
-  version: '9.*'
