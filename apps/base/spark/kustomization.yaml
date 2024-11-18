@@ -3,7 +3,8 @@ kind: Kustomization
 namespace: legalrag
 resources:
    - namespace.yaml
-   - spark.yaml
+   - sparkrepository.yaml
+   - spark-release.yaml
 #  valuesFile: values.yaml
 #  additionalValuesFiles:
 #  - values-file-1.yml
