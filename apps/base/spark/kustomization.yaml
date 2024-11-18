@@ -3,12 +3,7 @@ kind: Kustomization
 namespace: legalrag
 resources:
    - namespace.yaml
-helmCharts:
-- name: spark
-  repo: oci://registry-1.docker.io/bitnamicharts/spark
-  version: v1.2.0
-  releaseName: dev-spark
-  namespace: legalrag
+   - spark.yaml
 #  valuesFile: values.yaml
 #  additionalValuesFiles:
 #  - values-file-1.yml
