@@ -13,4 +13,4 @@ spec:
   path: ./apps/dev
   prune: true
   wait: true
-  timeout: 10m0s
+  timeout: 1h0s
