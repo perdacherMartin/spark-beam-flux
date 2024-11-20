@@ -21,5 +21,6 @@ spec:
     enable: true
   driftDetection:
     mode: enabled
-#  values:
-#    replicaCount: 2
+  valuesFrom:
+    - kind: ConfigMap
+      name: spark-values.yaml
