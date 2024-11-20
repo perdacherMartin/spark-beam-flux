@@ -5,7 +5,7 @@ FROM mcr.microsoft.com/vscode/devcontainers/base:0-${VARIANT}
 
 RUN apt-get update && apt-get -y install --no-install-recommends \
    gcc curl gpg wget software-properties-common \
-   pciutils graphviz jsonnet dos2unix iputils-ping
+   pciutils graphviz jsonnet dos2unix iputils-ping golang-go
 
 # https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#install-guide
 RUN curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
@@ -27,6 +27,8 @@ RUN curl -s https://fluxcd.io/install.sh | sudo bash
 
 # Install Kustomize
 RUN curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh" | bash
+RUN chmod +x ./kustomize
+RUN mv ./kustomize /usr/local/bin/kustomize
 
 #### COPY requirements.txt /tmp/
 #### COPY .bashrc /home/${USER}/
