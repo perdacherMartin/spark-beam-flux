@@ -4,8 +4,8 @@ metadata:
   name: spark
   namespace: legalrag
 spec:
-  interval: 10m
-  timeout: 5m
+  interval: 10m0s
+  timeout: 2m0s
   chartRef:
     kind: OCIRepository
     name: spark
