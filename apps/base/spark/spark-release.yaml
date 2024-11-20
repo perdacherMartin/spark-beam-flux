@@ -4,12 +4,22 @@ metadata:
   name: spark
   namespace: legalrag
 spec:
-  interval: 5m
-  releaseName: spark
+  interval: 10m
+  timeout: 5m
   chartRef:
     kind: OCIRepository
     name: spark
     namespace: legalrag
-  valuesFrom:
-    - kind: ConfigMap
-      name: spark-values
+  releaseName: spark
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  test:
+    enable: true
+  driftDetection:
+    mode: enabled
+#  values:
+#    replicaCount: 2
