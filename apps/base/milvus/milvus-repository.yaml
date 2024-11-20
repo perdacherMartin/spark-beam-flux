@@ -1,10 +1,11 @@
-apiVersion: source.toolkit.fluxcd.io/v1beta2
+apiVersion: source.toolkit.fluxcd.io/v2
 kind: OCIRepository
 metadata:
   name: milvus
   namespace: legalrag
 spec:
   interval: 5m
+  timeout: 2m0s
   url: oci://registry-1.docker.io/bitnamicharts/milvus
   ref:
     semver: ">2.4.0"
