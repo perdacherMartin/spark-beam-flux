@@ -4,15 +4,12 @@ metadata:
   name: milvus
   namespace: legalrag
 spec:
-  interval: 10m
-  chart:
-    spec:
-      chart: milvus
-      version: '4.2.19'
-      sourceRef:
-        kind: HelmRepository
-        name: milvus
-        namespace: flux-system
-      interval: 10m
-  values:
-    replicaCount: 2
+  interval: 5m
+  releaseName: milvus
+  chartRef:
+    kind: OCIRepository
+    name: milvus
+    namespace: legalrag
+  valuesFrom:
+    - kind: ConfigMap
+      name: milvus-values

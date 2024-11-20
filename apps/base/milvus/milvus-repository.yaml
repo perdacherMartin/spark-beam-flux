@@ -1,8 +1,10 @@
-apiVersion: source.toolkit.fluxcd.io/v1
-kind: HelmRepository
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: OCIRepository
 metadata:
   name: milvus
   namespace: legalrag
 spec:
-  interval: 1m
-  url: https://zilliztech.github.io/milvus-helm/
+  interval: 5m
+  url: oci://registry-1.docker.io/bitnamicharts/milvus
+  ref:
+    semver: ">2.4.0"

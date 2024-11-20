@@ -3,4 +3,4 @@ kind: Kustomization
 namespace: legalrag
 resources:
    - milvus-repository.yaml
-   - miluvs-release.yaml
+   - milvus-release.yaml
