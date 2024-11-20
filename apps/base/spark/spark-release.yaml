@@ -23,4 +23,4 @@ spec:
     mode: enabled
   valuesFrom:
     - kind: ConfigMap
-      name: spark-values.yaml
+      name: spark-values
