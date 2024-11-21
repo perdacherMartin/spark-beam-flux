@@ -4,4 +4,4 @@ namespace: legalrag
 resources:
 #  - ../base/podinfo
   - ../base/spark
-#  - ../base/milvus
+  - ../base/milvus
