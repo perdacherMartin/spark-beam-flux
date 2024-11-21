@@ -10,6 +10,7 @@ apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: OCIRepository
 metadata:
   name: spark
+  namespace: spark
 spec:
   interval: 5m0s
   timeout: 2m0s
