@@ -37,4 +37,4 @@ spec:
   values:
     - kind: ConfigMap
       name: spark-values
-      valuesKey: spark-values.yaml
+      valuesKey: spark-configmap.yaml
