@@ -34,7 +34,7 @@ spec:
     enable: true
   driftDetection:
     mode: enabled
-  valuesFrom:
+  values:
     - kind: ConfigMap
       name: spark-values
-      valuesKey: ./spark-values.yaml
+      valuesKey: spark-values.yaml
